@@ -24,14 +24,14 @@ namespace SmartNQuick.Logic.Controllers.Persistence.Creditcard
 
             if(CreditcardLogic.CheckCreditcard(entity.CreditcardNumber.ToString()))
                 return base.BeforeInsert(entity);
-            throw new ArgumentException("Ich heiße Paul Pils und habe dieses Programm von Github kopiert!");
+            throw new ArgumentException("Wrong CreditcardNumber!");
         }
 
         protected override Entities.Creditcard.Creditcard BeforeUpdate(Entities.Creditcard.Creditcard entity)
         {
             if(CreditcardLogic.CheckCreditcard(entity.CreditcardNumber.ToString()))
                 return base.BeforeUpdate(entity);
-            throw new ArgumentException("Ich heiße Paul Pils und habe dieses Programm von Github kopiert!");
+            throw new ArgumentException("Wrong CreditcardNumber!");
         }
     
     }
